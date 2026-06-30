@@ -1,0 +1,558 @@
+.mypage-mobile-screen {
+  padding: 0;
+  background: linear-gradient(180deg, #f6f0e4 0%, #fbf8f1 32%, #f9f6ee 100%);
+  color: #22284f;
+  font-family: "Noto Sans KR", "Apple SD Gothic Neo", "Segoe UI", sans-serif;
+}
+
+.mypage-mobile-hero {
+  background:
+    radial-gradient(circle at 50% -20%, rgba(255, 255, 255, 0.16), transparent 34%),
+    linear-gradient(180deg, #343882 0%, #262962 100%);
+  color: #ffffff;
+  box-shadow: 0 14px 28px rgba(31, 34, 86, 0.18);
+}
+
+.mypage-mobile-status {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: calc(10px + env(safe-area-inset-top, 0px)) 14px 0;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.mypage-mobile-indicators {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.mypage-mobile-signal {
+  display: inline-flex;
+  align-items: flex-end;
+  gap: 2px;
+  height: 10px;
+}
+
+.mypage-mobile-signal i {
+  display: block;
+  width: 2px;
+  border-radius: 999px;
+  background: currentColor;
+}
+
+.mypage-mobile-signal i:nth-child(1) {
+  height: 4px;
+}
+
+.mypage-mobile-signal i:nth-child(2) {
+  height: 6px;
+}
+
+.mypage-mobile-signal i:nth-child(3) {
+  height: 8px;
+}
+
+.mypage-mobile-signal i:nth-child(4) {
+  height: 10px;
+}
+
+.mypage-mobile-wifi {
+  width: 12px;
+  height: 9px;
+  border: 1.7px solid currentColor;
+  border-color: currentColor transparent transparent transparent;
+  border-radius: 50% 50% 0 0;
+  transform: scaleX(1.08);
+}
+
+.mypage-mobile-battery {
+  position: relative;
+  width: 21px;
+  height: 11px;
+  border: 1.7px solid currentColor;
+  border-radius: 3px;
+  box-sizing: border-box;
+}
+
+.mypage-mobile-battery::after {
+  content: "";
+  position: absolute;
+  right: -3px;
+  top: 3px;
+  width: 2px;
+  height: 4px;
+  border-radius: 0 2px 2px 0;
+  background: currentColor;
+}
+
+.mypage-mobile-battery-level {
+  position: absolute;
+  inset: 2px 4px 2px 2px;
+  border-radius: 1px;
+  background: currentColor;
+}
+
+.mypage-mobile-topbar {
+  display: grid;
+  grid-template-columns: 40px 1fr 40px;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 8px 16px;
+}
+
+.mypage-mobile-topbar h1 {
+  margin: 0;
+  color: #ffffff;
+  font-size: 26px;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  text-align: center;
+}
+
+.mypage-icon-button {
+  width: 36px;
+  height: 36px;
+  border: none;
+  border-radius: 50%;
+  background: transparent;
+  color: #ffffff;
+  display: grid;
+  place-items: center;
+  padding: 0;
+  cursor: pointer;
+}
+
+.mypage-icon-button--light {
+  background: rgba(255, 255, 255, 0.14);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.12);
+}
+
+.mypage-icon-button svg,
+.mypage-list-icon svg,
+.mypage-setting-arrow svg {
+  width: 18px;
+  height: 18px;
+  display: block;
+}
+
+.mypage-mobile-body {
+  padding:
+    16px 8px
+    calc(26px + env(safe-area-inset-bottom, 0px));
+}
+
+.mypage-section + .mypage-section {
+  margin-top: 26px;
+}
+
+.mypage-section-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.mypage-section-header h2 {
+  margin: 0;
+  color: #2a2f61;
+  font-size: 19px;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+}
+
+.mypage-section-header p {
+  margin-top: 4px;
+  color: #9f9786;
+  font-size: 11px;
+}
+
+.mypage-section-action {
+  border: none;
+  background: transparent;
+  color: #9c96a8;
+  font-size: 11px;
+  cursor: pointer;
+  padding: 0;
+}
+
+.mypage-activity-card,
+.mypage-list-card,
+.mypage-store-card,
+.mypage-settings-card {
+  border: 1px solid rgba(226, 197, 117, 0.9);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.84);
+  box-shadow: 0 10px 24px rgba(185, 155, 72, 0.08);
+}
+
+.mypage-activity-card {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  overflow: hidden;
+}
+
+.mypage-activity-stat {
+  padding: 14px 10px 12px;
+  text-align: center;
+}
+
+.mypage-activity-stat + .mypage-activity-stat {
+  border-left: 1px solid rgba(233, 225, 205, 0.9);
+}
+
+.mypage-activity-stat span {
+  display: block;
+  color: #a09a90;
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.mypage-activity-stat strong {
+  display: block;
+  margin-top: 8px;
+  color: #2a2f61;
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+}
+
+.mypage-activity-stat .is-highlight {
+  color: #efb83d;
+}
+
+.mypage-card-stack {
+  display: grid;
+  gap: 10px;
+}
+
+.mypage-progress-card,
+.mypage-streak-card {
+  border: 1px solid rgba(233, 202, 124, 0.92);
+  border-radius: 14px;
+  background: rgba(255, 250, 238, 0.88);
+  padding: 14px 14px 12px;
+}
+
+.mypage-progress-summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.mypage-level-chip {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.mypage-level-badge {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: linear-gradient(180deg, #f4d24f 0%, #efba39 100%);
+  color: #5e4a10;
+  display: grid;
+  place-items: center;
+  font-size: 15px;
+  font-weight: 900;
+}
+
+.mypage-level-chip strong,
+.mypage-streak-head strong,
+.mypage-list-copy strong,
+.mypage-store-product strong {
+  display: block;
+  color: #2a2f61;
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.mypage-level-chip span {
+  display: block;
+  margin-top: 2px;
+  color: #99907b;
+  font-size: 10px;
+}
+
+.mypage-progress-percent {
+  color: #2a2f61;
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.mypage-progress-track {
+  width: 100%;
+  height: 7px;
+  margin-top: 12px;
+  border-radius: 999px;
+  background: #efe5c9;
+  overflow: hidden;
+}
+
+.mypage-progress-fill {
+  display: block;
+  width: 82%;
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, #f4d45f 0%, #eebc46 100%);
+}
+
+.mypage-progress-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 8px;
+  color: #c6a33e;
+  font-size: 9px;
+}
+
+.mypage-progress-meta span:first-child {
+  color: #99907b;
+}
+
+.mypage-streak-head {
+  margin-bottom: 12px;
+}
+
+.mypage-streak-days {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: 6px;
+}
+
+.mypage-streak-day {
+  display: grid;
+  justify-items: center;
+  gap: 4px;
+}
+
+.mypage-streak-day strong {
+  width: 28px;
+  height: 28px;
+  border-radius: 8px;
+  background: #eef0f8;
+  color: #55607f;
+  display: grid;
+  place-items: center;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.mypage-streak-day span {
+  color: #8f8b87;
+  font-size: 9px;
+}
+
+.mypage-streak-day.is-active strong {
+  background: linear-gradient(180deg, #f4d45f 0%, #efbe3f 100%);
+  color: #493600;
+}
+
+.mypage-list-row {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 12px;
+  padding: 14px 12px;
+  align-items: start;
+}
+
+.mypage-list-row + .mypage-list-row {
+  border-top: 1px solid rgba(238, 231, 217, 0.9);
+}
+
+.mypage-list-icon {
+  width: 28px;
+  height: 28px;
+  border-radius: 8px;
+  background: #2f356f;
+  color: #ffffff;
+  display: grid;
+  place-items: center;
+  flex: 0 0 auto;
+}
+
+.mypage-list-icon--small {
+  width: 24px;
+  height: 24px;
+  border-radius: 7px;
+}
+
+.mypage-list-copy {
+  min-width: 0;
+  text-align: left;
+}
+
+.mypage-list-meta {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 6px;
+  flex-wrap: wrap;
+}
+
+.mypage-tag {
+  display: inline-flex;
+  align-items: center;
+  min-height: 18px;
+  padding: 0 7px;
+  border-radius: 999px;
+  background: #f4d45f;
+  color: #5f4a10;
+  font-size: 9px;
+  font-weight: 800;
+}
+
+.mypage-date {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  color: #a39a89;
+  font-size: 10px;
+}
+
+.mypage-date svg {
+  width: 12px;
+  height: 12px;
+}
+
+.mypage-points {
+  color: #f08e59;
+  font-size: 12px;
+  font-weight: 800;
+  align-self: center;
+}
+
+.mypage-points.is-minus {
+  color: #5aa65e;
+}
+
+.mypage-store-card {
+  padding: 14px 12px 12px;
+}
+
+.mypage-store-tabs {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  padding-bottom: 2px;
+  scrollbar-width: none;
+}
+
+.mypage-store-tabs::-webkit-scrollbar {
+  display: none;
+}
+
+.mypage-store-tab {
+  border: none;
+  border-radius: 999px;
+  background: #eff1f7;
+  color: #7a7e91;
+  min-height: 28px;
+  padding: 0 12px;
+  white-space: nowrap;
+  font-size: 10px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.mypage-store-tab.is-active {
+  background: #2d3168;
+  color: #ffffff;
+}
+
+.mypage-store-product {
+  display: grid;
+  justify-items: center;
+  gap: 8px;
+  padding: 20px 0 16px;
+}
+
+.mypage-store-visual {
+  width: 74px;
+  height: 74px;
+  border-radius: 24px;
+  background:
+    radial-gradient(circle at 35% 30%, rgba(255, 255, 255, 0.75), transparent 28%),
+    linear-gradient(180deg, #ffffff 0%, #f2eadc 100%);
+  box-shadow: 0 16px 24px rgba(163, 123, 58, 0.18);
+  display: grid;
+  place-items: center;
+  font-size: 38px;
+}
+
+.mypage-store-product span {
+  color: #d2a640;
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.mypage-store-button {
+  width: 100%;
+  min-height: 48px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(180deg, #f4d25c 0%, #efc54a 100%);
+  color: #443400;
+  font-size: 15px;
+  font-weight: 800;
+  cursor: pointer;
+  box-shadow: 0 14px 24px rgba(239, 197, 74, 0.22);
+}
+
+.mypage-settings-card {
+  overflow: hidden;
+}
+
+.mypage-setting-row {
+  width: 100%;
+  border: none;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 15px 12px;
+  cursor: pointer;
+}
+
+.mypage-setting-row + .mypage-setting-row {
+  border-top: 1px solid rgba(238, 231, 217, 0.9);
+}
+
+.mypage-setting-main {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #2a2f61;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.mypage-setting-arrow {
+  color: #7d8096;
+}
+
+.mypage-logout-button {
+  width: 100%;
+  min-height: 50px;
+  margin-top: 24px;
+  border: 1px solid rgba(188, 164, 107, 0.45);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.72);
+  color: #7d5f20;
+  font-size: 15px;
+  font-weight: 800;
+  cursor: pointer;
+  box-shadow: 0 10px 20px rgba(185, 155, 72, 0.08);
+}
+
+@media (max-width: 760px) {
+  .mypage-mobile-topbar h1 {
+    font-size: 24px;
+  }
+}
